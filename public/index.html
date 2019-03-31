@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Trollbook</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="title">
+      <h1>Welcome to Trollbook!</h1>
+      <div class="buttonset">
+        <a href="/login.html">Login</a>
+        <a href="/login.html">Login as somebody else</a>
+        <a href="/register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="explain">
+    <p>We've recently received some complaints about our having stored your passwords in plaintext. </p>
+    <p>To try to make everbody happy, we decided: We won't store your passwords in plaintext; in fact, we won't store them at all!</p>
+    <p>Our innovative login system now allows you to access your account without even giving a password!</p>
+    <p>Please don't change other people's information on Trollbook unless it will be really funny.</p>
+    <p>Site is in development, and you will be able to change ALL information soon</p>
+  </div>
+
+  <div id="app" class="content">
+    <div v-for="user in users">
+      <div v-if="user">
+        <h2>{{user.username}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="https://github.com/BYU-CS-260-Winter-2019/lab-4-theseal53">Github</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
